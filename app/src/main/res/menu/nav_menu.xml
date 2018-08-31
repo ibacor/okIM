@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/nav_g_favorite">
+        <item android:id="@+id/nav_favorite" android:icon="@mipmap/ic_launcher" android:title="收藏"/>
+    </group>
+    <group android:id="@+id/nav_g_photo">
+        <item android:id="@+id/nav_photo" android:icon="@mipmap/ic_launcher" android:title="收藏"/>
+    </group>
+    <group android:id="@+id/nav_g_setting">
+        <item android:id="@+id/nav_setting" android:icon="@mipmap/ic_launcher" android:title="收藏"/>
+    </group>
+</menu>
