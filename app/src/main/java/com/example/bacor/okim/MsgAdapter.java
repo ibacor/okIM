@@ -32,15 +32,15 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         MsgBean msgBean = list.get(position);
         if(msgBean.getType() == MsgBean.TYPE_RECEIVED){
-            //receive the message
+            //onReceive the message
             holder.mLlLeftMsg.setVisibility(View.VISIBLE);
             holder.mLlRightMsg.setVisibility(View.GONE);
-            holder.mLeftMsg.setText(msgBean.getContent());
+            holder.mLeftMsg.setText((String)msgBean.getContent().getMsg());
         }else if(msgBean.getType() == MsgBean.TYPE_SEND){
             //send the message
             holder.mLlLeftMsg.setVisibility(View.GONE);
             holder.mLlRightMsg.setVisibility(View.VISIBLE);
-            holder.mRightMsg.setText(msgBean.getContent());
+            holder.mRightMsg.setText((String)msgBean.getContent().getMsg());
         }
     }
 

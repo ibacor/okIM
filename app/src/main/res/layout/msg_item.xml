@@ -9,14 +9,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:background="@drawable/msg_receive"
+        android:background="@drawable/msg_left"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/left_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp" />
+            android:layout_marginStart="0dp"
+            android:text="hello" />
     </LinearLayout>
 
     <LinearLayout
@@ -24,14 +25,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:background="@drawable/msg_send"
+        android:background="@drawable/msg_right"
         android:orientation="vertical">
         <TextView
             android:id="@+id/right_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"/>
+            android:layout_gravity="end"
+            android:text="hello"/>
     </LinearLayout>
 
 </LinearLayout>
