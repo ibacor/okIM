@@ -35,22 +35,24 @@ public class MsgMainActivity extends AppCompatActivity{
     private void initSend() {
         final MsgSend msgSend = new MsgSend();
         Button btnSend = findViewById(R.id.msg_btn_send);
-        EditText etInput = findViewById(R.id.msg_et_input);
-        String strSendMsg = etInput.getText().toString();
-        final MsgWrapper msgWrapper = new MsgWrapper(Constants.MSG,"client1","client2",strSendMsg);
+        final EditText etInput = findViewById(R.id.msg_et_input);
+        final Friend friend = new Friend();
+
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String strSendMsg = etInput.getText().toString();
+                MsgWrapper msgWrapper = new MsgWrapper(Constants.MSG,friend.getUserId(),friend.getFriend(),strSendMsg);
                 msgSend.send(msgWrapper);
             }
         });
     }
 
     void initReceive(){
-        msgList.add(new MsgBean(new MsgWrapper(Constants.MSG,"client1","client2","hello"),MsgBean.TYPE_RECEIVED));
-        msgList.add(new MsgBean(new MsgWrapper(Constants.MSG,"client1","client2","how are you?"),MsgBean.TYPE_RECEIVED));
-        msgList.add(new MsgBean(new MsgWrapper(Constants.MSG,"client1","client2","I'm fine. Thank you, and you?"),MsgBean.TYPE_SEND));
-        msgList.add(new MsgBean(new MsgWrapper(Constants.MSG,"client1","client2","I'm fine too!"),MsgBean.TYPE_RECEIVED));
+        msgList.add(new MsgBean(new MsgWrapper(Constants.MSG,"","","hello"),MsgBean.TYPE_RECEIVED));
+        msgList.add(new MsgBean(new MsgWrapper(Constants.MSG,"","","how are you?"),MsgBean.TYPE_RECEIVED));
+        msgList.add(new MsgBean(new MsgWrapper(Constants.MSG,"","","I'm fine. Thank you, and you?"),MsgBean.TYPE_SEND));
+        msgList.add(new MsgBean(new MsgWrapper(Constants.MSG,"","","I'm fine too!"),MsgBean.TYPE_RECEIVED));
 
         MsgReceive msgReceive = new MsgReceive();
         msgReceive.setOnReceiveListener(new IReceiveListener() {
@@ -60,5 +62,6 @@ public class MsgMainActivity extends AppCompatActivity{
                 msgList.add(msgBean);
             }
         });
+        msgReceive.startReceive();
     }
 }

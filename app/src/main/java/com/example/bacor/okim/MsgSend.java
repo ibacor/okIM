@@ -24,7 +24,7 @@ public class MsgSend {
             super.handleMessage(msg);
             switch(msg.what){
                 case Constants.FAILED:
-                    Log.e(TAG, "handleMessage: send message failed");
+                    Log.d(TAG, "handleMessage: send message failed");
                     break;
             }
         }
@@ -38,8 +38,8 @@ public class MsgSend {
                 Socket socket;
                 ObjectOutputStream oos;
                 try {
-                    socket = SocketClient.getInstance();
-                    oos = new ObjectOutputStream(socket.getOutputStream());
+                    socket = SocketClient.getSingleSocket();
+                    oos = SocketClient.getSingleOOS(socket);
                     oos.writeObject(msgWrapper);
                     oos.flush();
                 } catch (IOException e) {

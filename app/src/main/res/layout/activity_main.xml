@@ -21,34 +21,34 @@
             android:text="跳转"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
-        <Button
-            android:id="@+id/main_btn_connect"
+        <EditText
+            android:id="@+id/main_et_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="connect"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
         <EditText
-            android:id="@+id/main_et_send"
+            android:id="@+id/main_et_friend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:hint="your friend's userId"/>
         <Button
-            android:id="@+id/main_btn_send"
+            android:id="@+id/main_btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="send"
-            android:layout_marginTop="5dp"
+            android:text="登录"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
         <Button
             android:id="@+id/main_btn_disconnect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="disconnect"
+            android:text="注销"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>

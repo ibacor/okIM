@@ -30,4 +30,14 @@ public class MsgWrapper extends BaseCommand{
     public Object getMsg() {
         return msg;
     }
+
+    @Override
+    public String toString() {
+        return "MsgWrapper{" +
+                "userId='" + userId + '\'' +
+                ", receiver='" + receiver + '\'' +
+                ", msg=" + msg +
+                ", flag='" + flag + '\'' +
+                '}';
+    }
 }

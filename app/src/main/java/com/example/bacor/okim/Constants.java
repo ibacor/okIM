@@ -5,7 +5,7 @@ package com.example.bacor.okim;
  */
 
 public class Constants {
-    public static final String HOST = "";
+    public static final String HOST = "222.16.37.216";
     public static final int PORT = 2018;
 
     public static final int SUCCEED = 1;

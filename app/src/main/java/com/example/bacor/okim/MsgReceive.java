@@ -49,10 +49,9 @@ public class MsgReceive {
                 ObjectInputStream ois;
 
                 try {
+                    socket = SocketClient.getSingleSocket();
+                    ois = SocketClient.getSingleOIS(socket);
                     while(true) {
-                        socket = SocketClient.getInstance();
-                        ois = new ObjectInputStream(socket.getInputStream());
-
                         MsgWrapper receiveMsg = (MsgWrapper) ois.readObject();
                         Log.d(TAG, "received: " + receiveMsg.toString());
                         Message msg = new Message();
