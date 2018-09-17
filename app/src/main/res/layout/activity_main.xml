@@ -52,6 +52,31 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/main_btn_start_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始下载"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:id="@+id/main_btn_pause_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="暂停下载"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:id="@+id/main_btn_cancel_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="取消下载"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
