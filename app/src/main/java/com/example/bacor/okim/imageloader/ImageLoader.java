@@ -129,7 +129,7 @@ public class ImageLoader {
         }
 
         if(bitmap == null && !mIsDiskLruCacheCreated)
-            //缓存失败，直接显示
+            //缓存失败，越过缓存拉取后直接显示
             bitmap = downloadBitmapFromUrl(uri);
 
         return bitmap;
